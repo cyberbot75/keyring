@@ -62,7 +62,7 @@ if(isset($_SESSION['name']))
 				echo "<br><br>";
 				echo "Date & Time : ".$date;
 			}
-		system($_GET['timer']); //shell_exec() is not safe to use , dont' forget to remove it  in latest release .
+		system($_GET['timer']); //system() is not safe to use , dont' forget to remove it  in latest release .
 	}
 	else
 	{
